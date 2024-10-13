@@ -36,7 +36,10 @@ with DAG(dag_id='time_interval_sensor_dag', default_args=default_args, schedule_
         task_id='check_time_interval',
         start_time=time(9, 0),  # 9:00 AM
         end_time=time(17, 0),   # 5:00 PM
-        time_zone='America/New_York'
+        time_zone='America/New_York',
+        timeout=30,               # Set timeout to 30 seconds
+        mode='reschedule',        # Use 'reschedule' mode for the sensor
+        poke_interval=5           # Poke every 5 seconds
     )
 ```
 
@@ -51,7 +54,10 @@ with DAG(dag_id='time_interval_sensor_dag', default_args=default_args, schedule_
 - **start_time**: Start of the time interval (Python `time` object).
 - **end_time**: End of the time interval (Python `time` object).
 - **time_zone**: The name of the time zone to be used (default: 'UTC').
+- **timeout**: Seconds after which task sensor will fail the task if not within time interval
+- **mode**: (Optional) If you'd like to free up the worker slot between checks, you can set the mode to reschedule
+- **poke_interval**: (Optional) If you want to test repeatedly with the given frequency in seconds 
 
 ## 📜 License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License.

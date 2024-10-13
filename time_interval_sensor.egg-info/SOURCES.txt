@@ -4,6 +4,7 @@ README.md
 setup.py
 sensors/__init__.py
 sensors/time_interval_sensor.py
+tests/test_time_interval_sensor.py
 time_interval_sensor.egg-info/PKG-INFO
 time_interval_sensor.egg-info/SOURCES.txt
 time_interval_sensor.egg-info/dependency_links.txt

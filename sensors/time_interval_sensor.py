@@ -6,8 +6,8 @@ import pytz
 
 class TimeIntervalSensor(BaseSensorOperator):
     @apply_defaults
-    def __init__(self, start_time: time, end_time: time, time_zone: str = 'UTC', *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    def __init__(self, start_time: time, end_time: time, time_zone: str = 'UTC', timeout: int = 60, *args, **kwargs):
+        super().__init__(timeout=timeout, *args, **kwargs)
         self.start_time = start_time
         self.end_time = end_time
         self.time_zone = time_zone

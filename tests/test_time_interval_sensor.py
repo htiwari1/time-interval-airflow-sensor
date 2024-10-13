@@ -21,8 +21,8 @@ class TestTimeIntervalSensor(unittest.TestCase):
     def test_outside_interval(self):
         # Initialize sensor with a time interval
         sensor = TimeIntervalSensor(
-            start_time=time(10, 0), 
-            end_time=time(12, 0), 
+            start_time=time(17, 0), 
+            end_time=time(18, 0), 
             time_zone='UTC', 
             task_id='test_task'
         )
