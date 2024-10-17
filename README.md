@@ -19,7 +19,7 @@ pip install time-interval-sensor
 
 ## Quick Start
 
-Here’s a simple example of how to use `TimeIntervalSensor` in your Airflow DAGs:
+Here is a simple example of how to use `TimeIntervalSensor` in your Airflow DAGs:
 
 ```python
 from airflow import DAG
