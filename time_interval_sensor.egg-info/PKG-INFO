@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: time_interval_sensor
-Version: 0.1.4
+Version: 0.1.5
 Summary: A custom Airflow sensor to check if the current time is within a specific interval and time zone.
 Author: Hrishikesh Tiwari
 Author-email: htiwari1@gmail.com
@@ -35,7 +35,7 @@ pip install time-interval-sensor
 
 ## Quick Start
 
-Here’s a simple example of how to use `TimeIntervalSensor` in your Airflow DAGs:
+Here is a simple example of how to use `TimeIntervalSensor` in your Airflow DAGs:
 
 ```python
 from airflow import DAG
