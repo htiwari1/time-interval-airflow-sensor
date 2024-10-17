@@ -7,7 +7,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name='time_interval_sensor',
-    version='0.1.3',
+    version='0.1.4',
     description='A custom Airflow sensor to check if the current time is within a specific interval and time zone.',
     author='Hrishikesh Tiwari',
     long_description=long_description,  # Use README.md for the long description
